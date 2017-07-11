@@ -1,0 +1,15 @@
+{
+	"ImportPath": "github.com/silenceshell/hcache",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/tobert/pcstat",
+			"Rev": "91a7346e5b462a61e876c0574cb1ba331a6a5ac5"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "0b25a408a50076fbbcae6b7ac0ea5fbb0b085e79"
+		}
+	]
+}
