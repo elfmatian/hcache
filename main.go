@@ -139,8 +139,11 @@ func top(top int) {
 	stats := getStatsFromFiles(files)
 
 	sort.Sort(PcStatusList(stats))
-	topStats := stats[:top]
-	formatStats(topStats)
+
+        if len(stats) > top {
+                stats = stats[:top]
+        }
+        formatStats(stats)
 }
 
 func main() {
