@@ -5,8 +5,8 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
-	"strings"
 	"strconv"
+	"strings"
 )
 
 // Refresh reloads all the data associated with this process.

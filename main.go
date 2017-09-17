@@ -29,8 +29,8 @@ import (
 	"log"
 	"os"
 	"path"
-	"strings"
 	"sort"
+	"strings"
 
 	"github.com/tobert/pcstat"
 )
@@ -40,7 +40,6 @@ var (
 	terseFlag, nohdrFlag, jsonFlag, unicodeFlag bool
 	plainFlag, ppsFlag, histoFlag, bnameFlag    bool
 )
-
 
 func init() {
 	// TODO: error on useless/broken combinations
@@ -57,17 +56,17 @@ func init() {
 }
 
 func uniqueSlice(slice *[]string) {
-    found := make(map[string]bool)
-    total := 0
-    for i, val := range *slice {
-        if _, ok := found[val]; !ok {
-            found[val] = true
-            (*slice)[total] = (*slice)[i]
-            total++
-        }
-    }
+	found := make(map[string]bool)
+	total := 0
+	for i, val := range *slice {
+		if _, ok := found[val]; !ok {
+			found[val] = true
+			(*slice)[total] = (*slice)[i]
+			total++
+		}
+	}
 
-    *slice = (*slice)[:total]
+	*slice = (*slice)[:total]
 }
 
 func getStatsFromFiles(files []string) PcStatusList {
@@ -140,10 +139,10 @@ func top(top int) {
 
 	sort.Sort(PcStatusList(stats))
 
-        if len(stats) > top {
-                stats = stats[:top]
-        }
-        formatStats(stats)
+	if len(stats) > top {
+		stats = stats[:top]
+	}
+	formatStats(stats)
 }
 
 func main() {
